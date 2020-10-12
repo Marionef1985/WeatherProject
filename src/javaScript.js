@@ -87,7 +87,7 @@ function showTemperature(response) {
   let localWeatherIconDescription = document.querySelector("#icon-id");
   let localWeatherIcon = response.data.weather[0].icon;
 localWeatherIconDescription.innerHTML =`${localWeatherIcon}`;
-
+console.log(localWeatherIcon);
   //
   let localWeatherDescription = response.data.weather[0].main;
   let localRemoteWeatherDescription = document.querySelector(
