@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Week 2/3/4/5</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/21b514ce19.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-group">
+        <!-- contenedor de del grupo de cards-->
+        <div class="card todayscard">
+          <!-- card de la izquierda (todays) -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h1>
+                  <div class="currentcity" id="current-city">Barcelona</div>
+                </h1>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div class="col-12">
+                <div class="currentTemp" id="current-temp">24ºC</div>
+
+                <div class="tempdescription" id="temp-descrition">Sunny</div>
+                <br />
+                <div class="col-12">
+                  <i class="fas fa-sun"></i>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-12">
+                    <span class="minTemperature" id="min-temperature">
+                      Min 22ºC /</span
+                    >
+                    <span class="maxTemperature" id="max-temperature"
+                      >Max 28ºC
+                    </span>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-12">
+                    <button class="change" id="celcius-btn">ºC</button
+                    ><span class="buttonLines"> || </span>
+                    <button class="change" id="farenheit-btn">ºF</button>
+                    <span class="todayDate" id="todaydate"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card future-card">
+          <!-- card de la derecha (future) -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <form id="searchCity">
+                  <div class="form-group search-city">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputtext1"
+                      aria-describedby="textHelp"
+                      placeholder="Search City"
+                    />
+                  </div>
+                </form>
+                <div class="col-12">
+                  <button class="btnCurrent" id="btn-current">Current</button>
+                  <button class="btnGo" id="btn-go">Go</button>
+                </div>
+                <br />
+                <section class="col-12 second-card">
+                  <div class="row">
+                    <div class="col-4 weekDays">Monday</div>
+                    <div class="col-1">
+                      <i class="fas fa-cloud-sun-rain futureDatesIcons"></i>
+                    </div>
+                    <div class="col-7 min-max-text">
+                      <span class="min-temperature"> Min 18ºC / </span>
+                      <span class="max-temperature">Max 21ºC</span>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row">
+                    <div class="col-4 weekDays">Tuesday</div>
+                    <div class="col-1">
+                      <i class="fas fa-sun futureDatesIcons"></i>
+                    </div>
+                    <div class="col-7 min-max-text">
+                      <span class="min-temperature"> Min 22ºC / </span
+                      ><span class="max-temperature">Max 27ºC</span>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row">
+                    <div class="col-4 weekDays">Wednsday</div>
+                    <div class="col-1">
+                      <i class="fas fa-cloud futureDatesIcons"></i>
+                    </div>
+                    <div class="col-7 min-max-text">
+                      <span class="min-temperature"> Min 24ºC / </span
+                      ><span class="max-temperature">Max 28ºC</span>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row">
+                    <div class="col-4 weekDays">Thursday</div>
+                    <div class="col-1">
+                      <i class="fas fa-wind futureDatesIcons"></i>
+                    </div>
+                    <div class="col-7 min-max-text">
+                      <span class="min-temperature"> Min 17ºC / </span
+                      ><span class="max-temperature">Max 22ºC</span>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row">
+                    <div class="col-4 weekDays">Friday</div>
+                    <div class="col-1">
+                      <i class="fas fa-wind futureDatesIcons"></i>
+                    </div>
+                    <div class="col-7 min-max-text">
+                      <span class="min-temperature"> Min 18ºC / </span
+                      ><span class="max-temperature">Max 22ºC</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/javaScript.js"></script>
+  </body>
+</html>
