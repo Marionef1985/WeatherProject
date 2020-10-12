@@ -1,0 +1,132 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: center;
+  background-color: #ecf4f3;
+  padding-top: 75px;
+  color: rgb(0, 106, 113);
+}
+
+.container {
+  background-color: rgb(236, 244, 243);
+  font-size: 15px;
+}
+
+.card-group {
+  max-width: 750px;
+  box-shadow: 5px 10px 45px #68b0ab;
+}
+
+.todayscard {
+  max-width: 45%;
+  background-color: #ecf4f3;
+}
+
+.future-card {
+  background-color: #ecf4f3;
+}
+
+.currentcity {
+  font-size: 50px;
+  color: rgb(0, 106, 113);
+  display: block;
+  text-transform: capitalize;
+}
+
+.weekDays {
+  color: #68b0ab;
+  font-size: 15px;
+}
+.minTemperature {
+  color: #68b0ab;
+  font-size: 15px;
+}
+
+.maxTemperature {
+  color: #006a71;
+  font-size: 15px;
+}
+.currentTemp {
+  color: #68b0ab;
+  font-size: 60px;
+  font-weight: bolder;
+}
+.tempdescription {
+  font-size: 30px;
+  color: #68b0ab;
+  display: block;
+  text-transform: capitalize;
+}
+
+.todayDate {
+  font-size: 12px;
+  color: #68b0ab;
+}
+.buttonLines {
+  font-size: 12px;
+  color: #68b0ab;
+}
+
+.change {
+  font-size: 12px;
+  color: #68b0ab;
+  border-style: hidden;
+}
+button:hover {
+  color: #006a71;
+  font-weight: bold;
+  border-style: hidden;
+}
+
+.fas {
+  font-size: 60px;
+  color: #ff7e67;
+}
+.search-city {
+  padding-top: 5px;
+  padding-left: 15px;
+  width: 95%;
+  text-transform: capitalize;
+}
+
+.btnGo {
+  padding: 5px 14px;
+  background-color: #68b0ab;
+  border-radius: 10px;
+  border-style: hidden;
+  color: #ecf4f3;
+}
+button.btnGo:hover {
+  background-color: #006a71;
+  color: #ecf4f3;
+  transition-delay: 0.5ms;
+  font-weight: normal;
+}
+
+.btnCurrent {
+  padding: 5px 14px;
+  background-color: #68b0ab;
+  border-radius: 10px;
+  border-color: #006a71;
+  border-style: hidden;
+  color: #ecf4f3;
+  margin-right: 200px;
+}
+button.btnCurrent:hover {
+  background-color: #006a71;
+  color: #ecf4f3;
+  transition-delay: 0.5ms;
+  outline: none;
+  font-weight: normal;
+}
+
+.second-card {
+  color: #68b0ab;
+}
+
+.futureDatesIcons {
+  font-size: 20px;
+}
+
+.min-max-text {
+  font-size: 14px;
+}
