@@ -30,10 +30,10 @@ runtime();
 
 let formResault = document.querySelector("form");
 formResault.addEventListener("submit", getCity);
-formResault.addEventListener("submit", getRemoteForecast);
+
 let formResaultButtonGo = document.querySelector("#btn-go");
 formResaultButtonGo.addEventListener("click", getCity);
-formResaultButtonGo.addEventListener("click", getRemoteForecast);
+
 
 //toda la informacion que sale en el card de la izquierda (todays temp)
 function getRemoteWeather(response) {
