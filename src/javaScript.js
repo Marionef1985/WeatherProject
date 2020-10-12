@@ -40,7 +40,7 @@ function getRemoteWeather(response) {
   let remoteTemperature = Math.round(response.data.main.temp);
   let currentRemoteTemp = document.querySelector("#current-temp");
   currentRemoteTemp.innerHTML = `${remoteTemperature}ºC`;
-  let remoteWeatherDescription = response.data.weather[0].description;
+  let remoteWeatherDescription = response.data.weather[0].main;
   let currentRemoteWeatherDescription = document.querySelector(
     "#temp-descrition"
   );
@@ -86,7 +86,7 @@ function showTemperature(response) {
   currentCityName.innerHTML = `${currentCity}`;
   //
   //
-  let localWeatherDescription = response.data.weather[0].description;
+  let localWeatherDescription = response.data.weather[0].main;
   let localRemoteWeatherDescription = document.querySelector(
     "#temp-descrition"
   );
