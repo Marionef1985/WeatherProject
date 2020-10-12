@@ -85,7 +85,7 @@ function showTemperature(response) {
   let currentCityName = document.querySelector("#current-city");
   currentCityName.innerHTML = `${currentCity}`;
   let localWeatherIconDescription = document.querySelector("#icon-id");
-  let localWeatherIcon = reponse.data.weather[0].icon;
+  let localWeatherIcon = response.data.weather[0].icon;
 localWeatherIconDescription.innerHTML =`${localWeatherIcon}`;
 
   //
