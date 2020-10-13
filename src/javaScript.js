@@ -37,6 +37,9 @@ formResaultButtonGo.addEventListener("click", getCity);
 
 //toda la informacion que sale en el card de la izquierda (todays temp)
 function getRemoteWeather(response) {
+  let currentCityName = response.data.name;
+  let currentCity = document.querySelector("#current-city");
+  currentCity.innerHTML = `${currentCityName}`;
   let remoteTemperature = Math.round(response.data.main.temp);
   let currentRemoteTemp = document.querySelector("#current-temp");
   currentRemoteTemp.innerHTML = `${remoteTemperature}ºC`;
@@ -64,8 +67,6 @@ function getCity(event) {
   let units = "metric";
   let input = document.querySelector("#exampleInputtext1");
   let city = `${input.value}`;
-  let h1 = document.querySelector("#current-city");
-  h1.innerHTML = `${input.value}`;
   let apiUrlRemote = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrlRemote).then(getRemoteWeather);
