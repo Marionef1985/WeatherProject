@@ -55,6 +55,9 @@ function getRemoteWeather(response) {
   let remoteMaxTemp = Math.round(response.data.main.temp_max);
   let currentRemoteMaxTemp = document.querySelector("#max-temperature");
   currentRemoteMaxTemp.innerHTML = `Max ${remoteMaxTemp}ºC`;
+  let humidityTodayRemote = document.querySelector("#humidity-answer");
+  let humidityTodayInfoRemote = Math.round(response.data.main.humidity);
+  humidityTodayRemote.innerHTML = `${humidityTodayInfoRemote}%`
 }
 //
 
@@ -99,6 +102,9 @@ function showTemperature(response) {
   let localMaxTemp = Math.round(response.data.main.temp_max);
   let currentLocalMaxTemp = document.querySelector("#max-temperature");
   currentLocalMaxTemp.innerHTML = `Max ${localMaxTemp}ºC`;
+  let humidityToday = document.querySelector("#humidity-answer");
+  let humidityTodayInfo = Math.round(response.data.main.humidity);
+  humidityToday.innerHTML = `${humidityTodayInfo}%`
 }
 
 function showPosition(position) {
