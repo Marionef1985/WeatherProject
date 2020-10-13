@@ -66,16 +66,23 @@ function getRemoteWeather(response) {
 
 function getCity(event) {
   event.preventDefault();
-  let apiKey = "4618b7617a5cf5299e42edf3e250ff0a";
-  let units = "metric";
   let input = document.querySelector("#exampleInputtext1");
   let city = `${input.value}`;
-  let apiUrlRemote = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
-  axios.get(apiUrlRemote).then(getRemoteWeather);
+  search(city);
 }
 // esta formula de arriba te marca la ciudad que buscas en el search city en el header (#current-city) y le da las variables
 //necesarias a axios para llamar a la siguiente funcion "getRemoteWeather"
+
+function search(city) {
+  let units = "metric";
+let apiKey = "4618b7617a5cf5299e42edf3e250ff0a";
+let apiUrlRemote = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+axios.get(apiUrlRemote).then(getRemoteWeather);
+}
+
+search("New York");
+// creamo la formula de arriba para que cuando se abra la pagina te pongo algun info real, 
+//en este caso es de NY. al abrir la pagina muestra NY y si buscas alguna ciudad en especial, te la da tambien
 
 //ABAJO FORMULAS PARA CURRENT! LOCALIZACION DE UBICACION ACTUAL
 
