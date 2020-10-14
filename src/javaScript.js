@@ -35,6 +35,26 @@ formResaultButtonGo.addEventListener("click", getCity);
 
 
 //toda la informacion que sale en el card de la izquierda (todays temp)
+function getRemoteForecasteWeather (response){
+console.log(response);
+document.querySelector("#min-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_min);//day1
+document.querySelector("#max-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_max);//day1
+document.querySelector("#description-day-one").innerHTML = response.data.list[6].weather[0].main;//day1
+document.querySelector("#min-temp-day-two").innerHTML = Math.round(response.data.list[14].main.temp_min);//day2
+document.querySelector("#max-temp-day-two").innerHTML = Math.round(response.data.list[14].main.temp_max);//day2
+document.querySelector("#description-day-two").innerHTML = response.data.list[14].weather[0].main;//day2
+document.querySelector("#min-temp-day-three").innerHTML = Math.round(response.data.list[22].main.temp_min);//day3
+document.querySelector("#max-temp-day-three").innerHTML = Math.round(response.data.list[22].main.temp_max);//day3
+document.querySelector("#description-day-three").innerHTML = response.data.list[22].weather[0].main;//day3
+document.querySelector("#min-temp-day-four").innerHTML = Math.round(response.data.list[30].main.temp_min);//day4
+document.querySelector("#max-temp-day-four").innerHTML = Math.round(response.data.list[30].main.temp_max);//day4
+document.querySelector("#description-day-four").innerHTML = response.data.list[30].weather[0].main;//day4
+document.querySelector("#min-temp-day-five").innerHTML = Math.round(response.data.list[38].main.temp_min);//day5
+document.querySelector("#max-temp-day-five").innerHTML = Math.round(response.data.list[38].main.temp_max);//day5
+document.querySelector("#description-day-five").innerHTML = response.data.list[38].weather[0].main;//day5
+}
+
+
 function getRemoteWeather(response) {
   //let currentCityName = response.data.name;
   //let currentCity = document.querySelector("#current-city");
@@ -64,7 +84,9 @@ function search(city) {
   let units = "metric";
 let apiKey = "4618b7617a5cf5299e42edf3e250ff0a";
 let apiUrlRemote = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+let apiUrlRemoteForecaste = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`
 axios.get(apiUrlRemote).then(getRemoteWeather);
+axios.get(apiUrlRemoteForecaste).then(getRemoteForecasteWeather);
 }
 
 search("New York");
@@ -74,7 +96,7 @@ search("New York");
 //ABAJO FORMULAS PARA CURRENT! LOCALIZACION DE UBICACION ACTUAL
 
 //esta formula de abajo hace que salga la temperatura actual #current-temp segun geolocalizacion, y el nomnbre de ciudad #current-city//WORKING
-function showForecastTemperature(response) {
+function showForecastCurrentTemperature(response) {
 console.log(response);
 document.querySelector("#min-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_min);//day1
 document.querySelector("#max-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_max);//day1
@@ -117,7 +139,7 @@ function showPosition(position) {
   console.log(apiUrl);
   console.log(apiUrlForecast);
   axios.get(apiUrl).then(showTemperature); 
-  axios.get(apiUrlForecast).then(showForecastTemperature); 
+  axios.get(apiUrlForecast).then(showForecastCurrentTemperature); 
   //estamos llamando a axios para que nos muestre la temperatura local, pero tenemos que crear primero la function de "showTemperature"
 } //cuando usamos axios, en la function que creamos pondremos un (response) osea showTemperature(response)
 
