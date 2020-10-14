@@ -65,6 +65,8 @@ function getRemoteWeather(response) {
   document.querySelector("#min-temperature").innerHTML = Math.round(response.data.main.temp_min);
   document.querySelector("#max-temperature").innerHTML = Math.round(response.data.main.temp_max);
   document.querySelector("#humidity-answer").innerHTML = Math.round(response.data.main.humidity);
+  document.querySelector("#icon-left-card").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#icon-left-card").setAttribute("alt", `${response.data.weather[0].description}`);
 }
 //
 
