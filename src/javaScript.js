@@ -30,34 +30,21 @@ runtime();
 
 let formResault = document.querySelector("form");
 formResault.addEventListener("submit", getCity);
-
 let formResaultButtonGo = document.querySelector("#btn-go");
 formResaultButtonGo.addEventListener("click", getCity);
 
 
 //toda la informacion que sale en el card de la izquierda (todays temp)
 function getRemoteWeather(response) {
-  let currentCityName = response.data.name;
-  let currentCity = document.querySelector("#current-city");
-  currentCity.innerHTML = `${currentCityName}`;
-  let remoteTemperature = Math.round(response.data.main.temp);
-  let currentRemoteTemp = document.querySelector("#current-temp");
-  currentRemoteTemp.innerHTML = `${remoteTemperature}ºC`;
-  let remoteWeatherDescription = response.data.weather[0].main;
-  let currentRemoteWeatherDescription = document.querySelector(
-    "#temp-descrition"
-  );
-  currentRemoteWeatherDescription.innerHTML = `${remoteWeatherDescription}`;
-  let remoteMinTemp = Math.round(response.data.main.temp_min);
-  console.log(remoteMinTemp);
-  let currentRemoteMinTemp = document.querySelector("#min-temperature");
-  currentRemoteMinTemp.innerHTML = `Min ${remoteMinTemp}ºC /`;
-  let remoteMaxTemp = Math.round(response.data.main.temp_max);
-  let currentRemoteMaxTemp = document.querySelector("#max-temperature");
-  currentRemoteMaxTemp.innerHTML = `Max ${remoteMaxTemp}ºC`;
-  let humidityTodayRemote = document.querySelector("#humidity-answer");
-  let humidityTodayInfoRemote = Math.round(response.data.main.humidity);
-  humidityTodayRemote.innerHTML = `${humidityTodayInfoRemote}%`
+  //let currentCityName = response.data.name;
+  //let currentCity = document.querySelector("#current-city");
+  //currentCity.innerHTML = `${currentCityName}`;
+  document.querySelector("#current-city").innerHTML= response.data.name;
+  document.querySelector("#current-temp").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#temp-descrition").innerHTML = response.data.weather[0].main;
+  document.querySelector("#min-temperature").innerHTML = Math.round(response.data.main.temp_min);
+  document.querySelector("#max-temperature").innerHTML = Math.round(response.data.main.temp_max);
+  document.querySelector("#humidity-answer").innerHTML = Math.round(response.data.main.humidity);
 }
 //
 
@@ -89,29 +76,15 @@ search("New York");
 //esta formula de abajo hace que salga la temperatura actual #current-temp segun geolocalizacion, y el nomnbre de ciudad #current-city//WORKING
 function showTemperature(response) {
   console.log(response);
-  let temperature = Math.round(response.data.main.temp);
-  let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = `${temperature}ºC`;
-  let currentCity = response.data.name;
-  let currentCityName = document.querySelector("#current-city");
-  currentCityName.innerHTML = `${currentCity}`;
-  
-  //
-  let localWeatherDescription = response.data.weather[0].main;
-  let localRemoteWeatherDescription = document.querySelector(
-    "#temp-descrition"
-  );
-  localRemoteWeatherDescription.innerHTML = `${localWeatherDescription}`;
-  let localMinTemp = Math.round(response.data.main.temp_min);
-  console.log(localMinTemp);
-  let currentLocalMinTemp = document.querySelector("#min-temperature");
-  currentLocalMinTemp.innerHTML = `Min ${localMinTemp}ºC /`;
-  let localMaxTemp = Math.round(response.data.main.temp_max);
-  let currentLocalMaxTemp = document.querySelector("#max-temperature");
-  currentLocalMaxTemp.innerHTML = `Max ${localMaxTemp}ºC`;
-  let humidityToday = document.querySelector("#humidity-answer");
-  let humidityTodayInfo = Math.round(response.data.main.humidity);
-  humidityToday.innerHTML = `${humidityTodayInfo}%`
+  document.querySelector("#current-temp").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#current-city").innerHTML = response.data.name;
+  //let currentCity = response.data.name;
+  //let currentCityName = document.querySelector("#current-city");
+  //currentCityName.innerHTML = `${currentCity}`;
+  document.querySelector("#temp-descrition").innerHTML = response.data.weather[0].main;
+  document.querySelector("#min-temperature").innerHTML = Math.round(response.data.main.temp_min);
+  document.querySelector("#max-temperature").innerHTML = Math.round(response.data.main.temp_max);
+  document.querySelector("#humidity-answer").innerHTML = Math.round(response.data.main.humidity);
 }
 
 function showPosition(position) {

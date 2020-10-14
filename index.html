@@ -38,7 +38,11 @@
               <br />
               <br />
               <div class="col-12">
-                <div class="currentTemp" id="current-temp"></div>
+                <div>
+                  <span class="currentTemp" id="current-temp"></span>
+                  <span class="currentTemp">ºC</span>
+                </div>
+
                 <div class="tempdescription" id="temp-descrition"></div>
                 <br />
                 <div class="col-12">
@@ -47,11 +51,15 @@
                 <br />
                 <div class="row">
                   <div class="col-12">
+                    <span class="minTemperatureToday">Min </span>
                     <span class="minTemperatureToday" id="min-temperature">
                       /</span
                     >
+                    <span class="minTemperatureToday">ºC /</span>
+                    <span class="maxTemperatureToday">Max </span>
                     <span class="maxTemperatureToday" id="max-temperature">
                     </span>
+                    <span class="maxTemperatureToday">ºC</span>
                   </div>
                 </div>
 
@@ -67,6 +75,11 @@
                       class="humidityAnswer maxTemperatureToday"
                       id="humidity-answer"
                     ></span>
+                    <span
+                      class="humidityToday maxTemperatureToday"
+                    >
+                      %
+                    </span>
                   </div>
                 </div>
                 <br />
