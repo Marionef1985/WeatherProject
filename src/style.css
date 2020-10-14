@@ -27,23 +27,22 @@ body {
 
 .currentcity {
   font-size: 50px;
-  color: rgb(0, 106, 113);
-  display: block;
-  text-transform: capitalize;
+  color: #006a71;
 }
 
 .weekDays {
   color: #68b0ab;
-  font-size: 15px;
+  font-size: 14px;
+}
+.minMaxFutureDays {
+  font-size: 14px;
 }
 .minTemperature {
   color: #68b0ab;
-  font-size: 14px;
 }
 
 .maxTemperature {
   color: #006a71;
-  font-size: 14px;
 }
 .currentTemp {
   color: #68b0ab;
@@ -85,7 +84,6 @@ button:hover {
   padding-top: 5px;
   padding-left: 15px;
   width: 95%;
-  text-transform: capitalize;
 }
 
 .btnGo {
@@ -95,27 +93,25 @@ button:hover {
   border-style: hidden;
   color: #ecf4f3;
 }
+
+.btnCurrent {
+  padding: 5px 14px;
+  background-color: #68b0ab;
+  border-radius: 10px;
+  border-style: hidden;
+  color: #ecf4f3;
+  margin-right: 200px;
+}
 button.btnGo:hover {
   background-color: #006a71;
   color: #ecf4f3;
   transition-delay: 0.5ms;
   font-weight: normal;
 }
-
-.btnCurrent {
-  padding: 5px 14px;
-  background-color: #68b0ab;
-  border-radius: 10px;
-  border-color: #006a71;
-  border-style: hidden;
-  color: #ecf4f3;
-  margin-right: 200px;
-}
 button.btnCurrent:hover {
   background-color: #006a71;
   color: #ecf4f3;
   transition-delay: 0.5ms;
-  outline: none;
   font-weight: normal;
 }
 
