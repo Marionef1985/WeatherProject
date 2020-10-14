@@ -74,6 +74,25 @@ search("New York");
 //ABAJO FORMULAS PARA CURRENT! LOCALIZACION DE UBICACION ACTUAL
 
 //esta formula de abajo hace que salga la temperatura actual #current-temp segun geolocalizacion, y el nomnbre de ciudad #current-city//WORKING
+function showForecastTemperature(response) {
+console.log(response);
+document.querySelector("#min-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_min);//day1
+document.querySelector("#max-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_max);//day1
+document.querySelector("#description-day-one").innerHTML = response.data.list[6].weather[0].main;//day1
+document.querySelector("#min-temp-day-two").innerHTML = Math.round(response.data.list[14].main.temp_min);//day2
+document.querySelector("#max-temp-day-two").innerHTML = Math.round(response.data.list[14].main.temp_max);//day2
+document.querySelector("#description-day-two").innerHTML = response.data.list[14].weather[0].main;//day2
+document.querySelector("#min-temp-day-three").innerHTML = Math.round(response.data.list[22].main.temp_min);//day3
+document.querySelector("#max-temp-day-three").innerHTML = Math.round(response.data.list[22].main.temp_max);//day3
+document.querySelector("#description-day-three").innerHTML = response.data.list[22].weather[0].main;//day3
+document.querySelector("#min-temp-day-four").innerHTML = Math.round(response.data.list[30].main.temp_min);//day4
+document.querySelector("#max-temp-day-four").innerHTML = Math.round(response.data.list[30].main.temp_max);//day4
+document.querySelector("#description-day-four").innerHTML = response.data.list[30].weather[0].main;//day4
+document.querySelector("#min-temp-day-five").innerHTML = Math.round(response.data.list[38].main.temp_min);//day5
+document.querySelector("#max-temp-day-five").innerHTML = Math.round(response.data.list[38].main.temp_max);//day5
+document.querySelector("#description-day-five").innerHTML = response.data.list[38].weather[0].main;//day5
+}
+
 function showTemperature(response) {
   console.log(response);
   document.querySelector("#current-temp").innerHTML = Math.round(response.data.main.temp);
@@ -94,9 +113,12 @@ function showPosition(position) {
   let units = "metric";
   let apiKey = "4618b7617a5cf5299e42edf3e250ff0a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
-
-  axios.get(apiUrl).then(showTemperature); //estamos llamando a axios para que nos muestre la temperatura local, pero tenemos que crear primero la function de "showTemperature"
+  console.log(apiUrlForecast);
+  axios.get(apiUrl).then(showTemperature); 
+  axios.get(apiUrlForecast).then(showForecastTemperature); 
+  //estamos llamando a axios para que nos muestre la temperatura local, pero tenemos que crear primero la function de "showTemperature"
 } //cuando usamos axios, en la function que creamos pondremos un (response) osea showTemperature(response)
 
 function getCurrentPosition() {
