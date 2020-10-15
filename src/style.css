@@ -20,14 +20,33 @@ body {
   max-width: 45%;
   background-color: #68b0ab;
 }
-
-.future-card {
-  background-color: #68b0ab;
-}
-
 .currentcity {
   font-size: 50px;
   color: #ecf4f3;
+}
+.currentTemp {
+  color: #ecf4f3;
+  font-size: 58px;
+}
+.tempdescription {
+  font-size: 30px;
+  color: #006a71;
+  display: block;
+  text-transform: capitalize;
+}
+.todayIcon {
+  width: 125px;
+}
+.minTemperatureToday {
+  font-size: 15px;
+  color: #ecf4f3;
+}
+.maxTemperatureToday {
+  font-size: 15px;
+}
+
+.future-card {
+  background-color: #68b0ab;
 }
 
 .weekDays {
@@ -43,16 +62,6 @@ body {
 
 .maxTemperature {
   color: #006a71;
-}
-.currentTemp {
-  color: #ecf4f3;
-  font-size: 60px;
-}
-.tempdescription {
-  font-size: 30px;
-  color: #006a71;
-  display: block;
-  text-transform: capitalize;
 }
 
 .todayDate {
@@ -122,17 +131,8 @@ button.btnCurrent:hover {
 }
 
 .futureDatesIcons {
-  width: 60px;
+  width: 55px;
   padding-right: 10px;
-}
-
-.maxTemperatureToday {
-  font-size: 15px;
-}
-
-.minTemperatureToday {
-  font-size: 15px;
-  color: #ecf4f3;
 }
 
 .myAccount {

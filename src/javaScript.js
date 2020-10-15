@@ -116,28 +116,28 @@ console.log(response);
 document.querySelector("#min-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_min);//day1
 document.querySelector("#max-temp-day-one").innerHTML = Math.round(response.data.list[6].main.temp_max);//day1
 document.querySelector("#description-day-one").innerHTML = response.data.list[6].weather[0].main;//day1
-//document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[7].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
-//document.querySelector("#icon-right-card-day-five").setAttribute("alt", `${response.data.list[7].weather[0].description}`);
+document.querySelector("#icon-right-card-day-one").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[7].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
+document.querySelector("#icon-right-card-day-one").setAttribute("alt", `${response.data.list[7].weather[0].description}`);
 document.querySelector("#min-temp-day-two").innerHTML = Math.round(response.data.list[14].main.temp_min);//day2
 document.querySelector("#max-temp-day-two").innerHTML = Math.round(response.data.list[14].main.temp_max);//day2
 document.querySelector("#description-day-two").innerHTML = response.data.list[14].weather[0].main;//day2
-//document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[15].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
-//document.querySelector("#icon-right-card-day-five").setAttribute("alt", `${response.data.list[15].weather[0].description}`);
+document.querySelector("#icon-right-card-day-two").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[15].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
+document.querySelector("#icon-right-card-day-two").setAttribute("alt", `${response.data.list[15].weather[0].description}`);
 document.querySelector("#min-temp-day-three").innerHTML = Math.round(response.data.list[22].main.temp_min);//day3
 document.querySelector("#max-temp-day-three").innerHTML = Math.round(response.data.list[22].main.temp_max);//day3
 document.querySelector("#description-day-three").innerHTML = response.data.list[22].weather[0].main;//day3
-//document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[23].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
-//document.querySelector("#icon-right-card-day-five").setAttribute("alt", `${response.data.list[23].weather[0].description}`);
+document.querySelector("#icon-right-card-day-three").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[23].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
+document.querySelector("#icon-right-card-day-three").setAttribute("alt", `${response.data.list[23].weather[0].description}`);
 document.querySelector("#min-temp-day-four").innerHTML = Math.round(response.data.list[30].main.temp_min);//day4
 document.querySelector("#max-temp-day-four").innerHTML = Math.round(response.data.list[30].main.temp_max);//day4
 document.querySelector("#description-day-four").innerHTML = response.data.list[30].weather[0].main;//day4
-//document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[31].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
-//document.querySelector("#icon-right-card-day-five").setAttribute("alt", `${response.data.list[31].weather[0].description}`);
+document.querySelector("#icon-right-card-day-four").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[31].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
+document.querySelector("#icon-right-card-day-four").setAttribute("alt", `${response.data.list[31].weather[0].description}`);
 document.querySelector("#min-temp-day-five").innerHTML = Math.round(response.data.list[38].main.temp_min);//day5
 document.querySelector("#max-temp-day-five").innerHTML = Math.round(response.data.list[38].main.temp_max);//day5
 document.querySelector("#description-day-five").innerHTML = response.data.list[38].weather[0].main;//day5
-//document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
-//document.querySelector("#icon-right-card-day-five").setAttribute("alt", `${response.data.list[39].weather[0].description}`);
+document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
+document.querySelector("#icon-right-card-day-five").setAttribute("alt", `${response.data.list[39].weather[0].description}`);
 }
 
 function showTemperature(response) {
