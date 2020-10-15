@@ -56,8 +56,8 @@
                     <span class="minTemperatureToday" id="min-temperature">
                       /</span
                     >
-                    <span class="minTemperatureToday">ºC /</span>
-                    <span class="maxTemperatureToday">Max </span>
+                    <span class="minTemperatureToday">ºC </span>
+                    <span class="maxTemperatureToday">|| Max </span>
                     <span class="maxTemperatureToday" id="max-temperature">
                     </span>
                     <span class="maxTemperatureToday">ºC</span>
@@ -66,14 +66,21 @@
 
                 <div class="row">
                   <div class="col-12">
+                    <span class="minTemperatureToday" id="humidity-today">
+                      Feels Like:
+                    </span>
                     <span
-                      class="humidityToday minTemperatureToday"
-                      id="humidity-today"
-                    >
+                      class="maxTemperatureToday"
+                      id="feels-like-answer"
+                    ></span>
+                    <span class="maxTemperature">ºC</span>
+                  </div>
+                  <div class="col-12">
+                    <span class="minTemperatureToday" id="humidity-today">
                       Humidity:
                     </span>
                     <span
-                      class="humidityAnswer maxTemperatureToday"
+                      class="maxTemperatureToday"
                       id="humidity-answer"
                     ></span>
                     <span class="humidityToday maxTemperatureToday"> % </span>
@@ -127,15 +134,22 @@
                 <br />
                 <section class="col-12 second-card">
                   <div class="row">
-                    <div class="col-4 weekDays">Monday</div>
-                    <div class="col-1">
-                      <i class="fas fa-cloud-sun-rain futureDatesIcons"></i>
+                    <div class="col-3 weekDays">Monday</div>
+                    <div class="col-2">
+                      <image
+                        src=""
+                        alt=""
+                        class="futureDatesIcons"
+                        id="icon-right-card-day-one"
+                      >
+                      </image>
+                      <!-- <i class="fas fa-sun" id="icon-id"></i>-->
                     </div>
                     <div class="col-7 minMaxFutureDays">
                       <span class="minTemperature">Min </span>
                       <span class="minTemperature" id="min-temp-day-one"></span>
-                      <span class="minTemperature">ºC / </span>
-                      <span class="maxTemperature">Max </span>
+                      <span class="minTemperature">ºC </span>
+                      <span class="maxTemperature">|| Max </span>
                       <span class="maxTemperature" id="max-temp-day-one"></span>
                       <span class="maxTemperature">ºC</span>
                       <div class="minTemperature">
@@ -150,15 +164,21 @@
                   </div>
                   <br />
                   <div class="row">
-                    <div class="col-4 weekDays">Tuesday</div>
-                    <div class="col-1">
-                      <i class="fas fa-sun futureDatesIcons"></i>
+                    <div class="col-3 weekDays">Tuesday</div>
+                    <div class="col-2">
+                      <image
+                        src=""
+                        alt=""
+                        class="futureDatesIcons"
+                        id="icon-right-card-day-two"
+                      >
+                      </image>
                     </div>
                     <div class="col-7 minMaxFutureDays">
                       <span class="minTemperature">Min </span>
                       <span class="minTemperature" id="min-temp-day-two"></span>
-                      <span class="minTemperature">ºC / </span>
-                      <span class="maxTemperature">Max </span>
+                      <span class="minTemperature">ºC </span>
+                      <span class="maxTemperature">|| Max </span>
                       <span class="maxTemperature" id="max-temp-day-two"></span>
                       <span class="maxTemperature">ºC</span>
                       <div class="minTemperature">
@@ -173,9 +193,15 @@
                   </div>
                   <br />
                   <div class="row">
-                    <div class="col-4 weekDays">Wednesday</div>
-                    <div class="col-1">
-                      <i class="fas fa-cloud futureDatesIcons"></i>
+                    <div class="col-3 weekDays">Wednesday</div>
+                    <div class="col-2">
+                      <image
+                        src=""
+                        alt=""
+                        class="futureDatesIcons"
+                        id="icon-right-card-day-three"
+                      >
+                      </image>
                     </div>
                     <div class="col-7 minMaxFutureDays">
                       <span class="minTemperature">Min </span>
@@ -183,8 +209,8 @@
                         class="minTemperature"
                         id="min-temp-day-three"
                       ></span>
-                      <span class="minTemperature">ºC / </span>
-                      <span class="maxTemperature">Max </span>
+                      <span class="minTemperature">ºC </span>
+                      <span class="maxTemperature">|| Max </span>
                       <span
                         class="maxTemperature"
                         id="max-temp-day-three"
@@ -202,9 +228,15 @@
                   </div>
                   <br />
                   <div class="row">
-                    <div class="col-4 weekDays">Thursday</div>
-                    <div class="col-1">
-                      <i class="fas fa-wind futureDatesIcons"></i>
+                    <div class="col-3 weekDays">Thursday</div>
+                    <div class="col-2">
+                      <image
+                        src=""
+                        alt=""
+                        class="futureDatesIcons"
+                        id="icon-right-card-day-four"
+                      >
+                      </image>
                     </div>
                     <div class="col-7 minMaxFutureDays">
                       <span class="minTemperature">Min </span>
@@ -212,8 +244,8 @@
                         class="minTemperature"
                         id="min-temp-day-four"
                       ></span>
-                      <span class="minTemperature">ºC / </span>
-                      <span class="maxTemperature">Max </span>
+                      <span class="minTemperature">ºC </span>
+                      <span class="maxTemperature">|| Max </span>
                       <span
                         class="maxTemperature"
                         id="max-temp-day-four"
@@ -231,9 +263,15 @@
                   </div>
                   <br />
                   <div class="row">
-                    <div class="col-4 weekDays">Friday</div>
-                    <div class="col-1">
-                      <i class="fas fa-wind futureDatesIcons"></i>
+                    <div class="col-3 weekDays">Friday</div>
+                    <div class="col-2">
+                      <image
+                        src=""
+                        alt=""
+                        class="futureDatesIcons"
+                        id="icon-right-card-day-five"
+                      >
+                      </image>
                     </div>
                     <div class="col-7 minMaxFutureDays">
                       <span class="minTemperature">Min </span>
@@ -241,8 +279,8 @@
                         class="minTemperature"
                         id="min-temp-day-five"
                       ></span>
-                      <span class="minTemperature">ºC / </span>
-                      <span class="maxTemperature">Max </span>
+                      <span class="minTemperature">ºC </span>
+                      <span class="maxTemperature">|| Max </span>
                       <span
                         class="maxTemperature"
                         id="max-temp-day-five"
