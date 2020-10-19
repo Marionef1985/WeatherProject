@@ -81,8 +81,8 @@ body {
 }
 button:hover {
   color: #ecf4f3;
-
   border-style: hidden;
+  cursor: default;
 }
 
 .search-city {
@@ -116,6 +116,7 @@ button.btnGo:hover {
   color: #ecf4f3;
   transition-delay: 0.5ms;
   font-weight: normal;
+  cursor: pointer;
 }
 button.btnCurrent:hover {
   background-color: #006a71;
@@ -124,6 +125,7 @@ button.btnCurrent:hover {
   color: #ecf4f3;
   transition-delay: 0.5ms;
   font-weight: normal;
+  cursor: pointer;
 }
 
 .second-card {
@@ -138,6 +140,12 @@ button.btnCurrent:hover {
 .myAccount {
   font-size: 12px;
   color: #006a71;
+  text-decoration: none;
+}
+.myAccount:hover {
+  text-decoration: none;
+  color: #ecf4f3;
+  cursor: default;
 }
 
 .myName {
