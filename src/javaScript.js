@@ -80,6 +80,13 @@ document.querySelector("#current-temp").innerHTML = `${Math.round(((currentTempC
 //document.querySelector("#max-temperature").innerHTML = `${Math.round(((currentMaxTempCelsiusRemote * 9) / 5) + 32)}ºF`;
 //document.querySelector("#feels-like-answer").innerHTML = `${Math.round(((currentTempCelsiusFeelsRemote * 9) / 5) + 32)}ºF`;
 }
+function changeTempCelRemote(event) {
+  event.preventDefault();
+  document.querySelector("#current-temp").innerHTML = `${currentTempCelsiusRemote}ºC`;
+  //document.querySelector("#min-temperature").innerHTML = `${currentMinTempCelsiusRemote}ºC`;
+  //document.querySelector("#max-temperature").innerHTML = `${currentMaxTempCelsiusRemote}ºC`;
+  //document.querySelector("#feels-like-answer").innerHTML = `${currentTempCelsiusFeelsRemote}ºC`;
+}
 
 
 function getRemoteWeather(response) {
@@ -100,13 +107,7 @@ function getRemoteWeather(response) {
   document.querySelector("#celcius-btn").addEventListener("click", changeTempCelRemote);
 }
 
-function changeTempCelRemote(event) {
-  event.preventDefault();
-  document.querySelector("#current-temp").innerHTML = `${currentTempCelsiusRemote}ºC`;
-  //document.querySelector("#min-temperature").innerHTML = `${currentMinTempCelsiusRemote}ºC`;
-  //document.querySelector("#max-temperature").innerHTML = `${currentMaxTempCelsiusRemote}ºC`;
-  //document.querySelector("#feels-like-answer").innerHTML = `${currentTempCelsiusFeelsRemote}ºC`;
-}
+
 //
 
 //esta funcion de arriba hace que segun la ciudad que buscaste en la formula de abajo, busque esa ciudad en la api, gracias
@@ -205,7 +206,7 @@ function showTemperature(response) {
   document.querySelector("#feels-like-answer").innerHTML = `${Math.round(response.data.main.feels_like)}ºC`;
   document.querySelector("#icon-left-card").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
   document.querySelector("#icon-left-card").setAttribute("alt", `${response.data.weather[0].description}`);
-document.querySelector("#farenheit-btn").addEventListener("click", changeTempFarCurrent); //latitude and longitude
+  document.querySelector("#farenheit-btn").addEventListener("click", changeTempFarCurrent); //latitude and longitude
   document.querySelector("#celcius-btn").addEventListener("click", changeTempCelCurrent);
 }
 
