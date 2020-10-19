@@ -43,33 +43,26 @@ document.querySelector("#btn-go").addEventListener("click", getCity);
 //toda la informacion que sale en el card de la izquierda (todays temp)
 function getRemoteForecasteWeather (response){
 console.log(response);
-document.querySelector("#min-temp-day-one").innerHTML = `${Math.round(response.data.list[6].main.temp_min)}ºC`;//day1
 document.querySelector("#max-temp-day-one").innerHTML = `${Math.round(response.data.list[6].main.temp_max)}ºC`;//day1
 document.querySelector("#description-day-one").innerHTML = response.data.list[6].weather[0].main;//day1
 document.querySelector("#icon-right-card-day-one").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[8].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-one").setAttribute("alt", `${response.data.list[8].weather[0].description}`);
-document.querySelector("#min-temp-day-two").innerHTML = `${Math.round(response.data.list[14].main.temp_min)}ºC`;//day2
 document.querySelector("#max-temp-day-two").innerHTML = `${Math.round(response.data.list[14].main.temp_max)}ºC`;//day2
 document.querySelector("#description-day-two").innerHTML = response.data.list[14].weather[0].main;//day2
 document.querySelector("#icon-right-card-day-two").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[16].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-two").setAttribute("alt", `${response.data.list[16].weather[0].description}`);
-document.querySelector("#min-temp-day-three").innerHTML = `${Math.round(response.data.list[22].main.temp_min)}ºC`;//day3
 document.querySelector("#max-temp-day-three").innerHTML = `${Math.round(response.data.list[22].main.temp_max)}ºC`;//day3
 document.querySelector("#description-day-three").innerHTML = response.data.list[22].weather[0].main;//day3
 document.querySelector("#icon-right-card-day-three").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[24].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-three").setAttribute("alt", `${response.data.list[24].weather[0].description}`);
-document.querySelector("#min-temp-day-four").innerHTML = `${Math.round(response.data.list[30].main.temp_min)}ºC`;//day4
 document.querySelector("#max-temp-day-four").innerHTML = `${Math.round(response.data.list[30].main.temp_max)}ºC`;//day4
 document.querySelector("#description-day-four").innerHTML = response.data.list[30].weather[0].main;//day4
 document.querySelector("#icon-right-card-day-four").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[32].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-four").setAttribute("alt", `${response.data.list[32].weather[0].description}`);
-document.querySelector("#min-temp-day-five").innerHTML = `${Math.round(response.data.list[38].main.temp_min)}ºC`;//day5
 document.querySelector("#max-temp-day-five").innerHTML = `${Math.round(response.data.list[38].main.temp_max)}ºC`;//day5
 document.querySelector("#description-day-five").innerHTML = response.data.list[38].weather[0].main;//day5
 document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-five").setAttribute("alt", `${response.data.list[39].weather[0].description}`);
-//document.querySelector("#icon-left-card").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
-//  document.querySelector("#icon-left-card").setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
 let currentTempCelsiusRemote = null;
@@ -140,37 +133,27 @@ search("New York");
 //esta formula de abajo hace que salga la temperatura actual #current-temp segun geolocalizacion, y el nomnbre de ciudad #current-city//WORKING
 function showForecastCurrentTemperature(response) {
 console.log(response);
-//minTempDayOneCurrent = Math.round(response.data.list[6].main.temp_min);
 //maxTempDayOneCurrent = Math.round(response.data.list[6].main.temp_max);
-//minTempDayTwoCurrent = Math.round(response.data.list[14].main.temp_min);
 //maxTempDayTwoCurrent = Math.round(response.data.list[14].main.temp_max);
-//minTempDayThreeCurrent = Math.round(response.data.list[22].main.temp_min);
 //maxTempDayThreeCurrent = Math.round(response.data.list[22].main.temp_max);
-//minTempDayFourCurrent = Math.round(response.data.list[30].main.temp_min);
 //maxTempDayFourCurrent = Math.round(response.data.list[30].main.temp_max);
-//minTempDayFiveCurrent = Math.round(response.data.list[38].main.temp_min);
 //maxTempDayFiveCurrent = Math.round(response.data.list[38].main.temp_max);
-document.querySelector("#min-temp-day-one").innerHTML = `${Math.round(response.data.list[6].main.temp_min)}ºC`;//day1
 document.querySelector("#max-temp-day-one").innerHTML = `${Math.round(response.data.list[6].main.temp_max)}ºC`;//day1
 document.querySelector("#description-day-one").innerHTML = response.data.list[6].weather[0].main;//day1
 document.querySelector("#icon-right-card-day-one").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[7].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-one").setAttribute("alt", `${response.data.list[7].weather[0].description}`);
-document.querySelector("#min-temp-day-two").innerHTML = `${Math.round(response.data.list[14].main.temp_min)}ºC`;//day2
 document.querySelector("#max-temp-day-two").innerHTML = `${Math.round(response.data.list[14].main.temp_max)}ºC`;//day2
 document.querySelector("#description-day-two").innerHTML = response.data.list[14].weather[0].main;//day2
 document.querySelector("#icon-right-card-day-two").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[15].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-two").setAttribute("alt", `${response.data.list[15].weather[0].description}`);
-document.querySelector("#min-temp-day-three").innerHTML = `${Math.round(response.data.list[22].main.temp_min)}ºC`;//day3
 document.querySelector("#max-temp-day-three").innerHTML = `${Math.round(response.data.list[22].main.temp_max)}ºC`;//day3
 document.querySelector("#description-day-three").innerHTML = response.data.list[22].weather[0].main;//day3
 document.querySelector("#icon-right-card-day-three").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[23].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-three").setAttribute("alt", `${response.data.list[23].weather[0].description}`);
-document.querySelector("#min-temp-day-four").innerHTML =`${Math.round(response.data.list[30].main.temp_min)}ºC`;//day4
 document.querySelector("#max-temp-day-four").innerHTML = `${Math.round(response.data.list[30].main.temp_max)}ºC`;//day4
 document.querySelector("#description-day-four").innerHTML = response.data.list[30].weather[0].main;//day4
 document.querySelector("#icon-right-card-day-four").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[31].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
 document.querySelector("#icon-right-card-day-four").setAttribute("alt", `${response.data.list[31].weather[0].description}`);
-document.querySelector("#min-temp-day-five").innerHTML = `${Math.round(response.data.list[38].main.temp_min)}ºC`;//day5
 document.querySelector("#max-temp-day-five").innerHTML = `${Math.round(response.data.list[38].main.temp_max)}ºC`;//day5
 document.querySelector("#description-day-five").innerHTML = response.data.list[38].weather[0].main;//day5
 document.querySelector("#icon-right-card-day-five").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
@@ -237,15 +220,11 @@ document.querySelector("#btn-current").addEventListener("click", getCurrentPosit
 
 //challenge 3 cambiar la temperatura de ºC a ºF
 
-//let minTempDayOneCurrent = null;
+
 //let maxTempDayOneCurrent = null;
-//let minTempDayTwoCurrent = null;
 //let maxTempDayTwoCurrent = null;
-//let minTempDayThreeCurrent = null;
 //let maxTempDayThreeCurrent = null;
-//let minTempDayFourCurrent = null;
 //let maxTempDayFourCurrent = null;
-//let minTempDayFiveCurrent = null;
 //let maxTempDayFiveCurrent = null;
 
 
