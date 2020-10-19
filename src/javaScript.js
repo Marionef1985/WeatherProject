@@ -25,6 +25,14 @@ function runtime() {
 }
 
 runtime();
+let dayTwo = days[now.getDay()+2];
+document.querySelector("#day-two").innerHTML = `${dayTwo}`;
+let dayThree = days[now.getDay()+3];
+document.querySelector("#day-three").innerHTML = `${dayThree}`;
+let dayFour = days[now.getDay()+4];
+document.querySelector("#day-four").innerHTML = `${dayFour}`;
+let dayFive = days[now.getDay()+5];
+document.querySelector("#day-five").innerHTML = `${dayFive}`;
 
 // esta formula pide que la info que pongamos en el search tenga un accion y llame a la funcion de "get city"
 
