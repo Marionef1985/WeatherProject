@@ -201,6 +201,7 @@ function showPosition(position) {
   let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
   console.log(apiUrlForecast);
+  console.log(latitude);
   axios.get(apiUrl).then(showTemperature); 
   axios.get(apiUrlForecast).then(showForecastCurrentTemperature); 
   //estamos llamando a axios para que nos muestre la temperatura local, pero tenemos que crear primero la function de "showTemperature"
