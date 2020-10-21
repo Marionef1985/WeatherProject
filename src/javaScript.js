@@ -100,9 +100,6 @@ function getRemoteWeather(response) {
   document.querySelector("#celcius-btn").addEventListener("click", changeTempCelRemote);
 }
 
-
-//
-
 //esta funcion de arriba hace que segun la ciudad que buscaste en la formula de abajo, busque esa ciudad en la api, gracias
 //a axios y te de los datos de la temperatura del lugar buscado
 
