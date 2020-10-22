@@ -75,6 +75,10 @@ axios.get(apiUrlRemoteForecaste).then(getRemoteForecasteWeather);
 
 search("New York");
 
+function getPrecipitation(response) {
+  console.log(response);
+}
+
 //4.A function to request the current location (axios)
 function showPosition(position) {
   let latitude = position.coords.latitude;
@@ -85,7 +89,6 @@ function showPosition(position) {
   let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
   console.log(apiUrlForecast);
-  console.log(latitude);
   axios.get(apiUrl).then(showCurrentLocationWeather); 
   axios.get(apiUrlForecast).then(getRemoteForecasteWeather); 
   //estamos llamando a axios para que nos muestre la temperatura local, pero tenemos que crear primero la function de "showTemperature"
@@ -105,9 +108,9 @@ function showCurrentLocationWeather(response) {
   document.querySelector("#temp-descrition").innerHTML = response.data.weather[0].main;
   document.querySelector("#min-temperature").innerHTML = `${Math.round(response.data.main.temp_min)}ºC` ;
   document.querySelector("#max-temperature").innerHTML = `${Math.round(response.data.main.temp_max)}ºC` ;
-  document.querySelector("#humidity-answer").innerHTML = Math.round(response.data.main.humidity);
-  document.querySelector("#feels-like-answer").innerHTML = `${Math.round(response.data.main.feels_like)}ºC`;
   document.querySelector("#wind-speed").innerHTML = `${Math.round(windSpeed * 3.6)}km/h`;
+  document.querySelector("#feels-like-answer").innerHTML = `${Math.round(response.data.main.feels_like)}ºC`;
+  document.querySelector("#humidity-answer").innerHTML = Math.round(response.data.main.humidity);
   document.querySelector("#icon-left-card").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
   document.querySelector("#icon-left-card").setAttribute("alt", `${response.data.weather[0].description}`);
   document.querySelector("#farenheit-btn").addEventListener("click", changeTempFarCurrent); //latitude and longitude
@@ -117,12 +120,12 @@ function showCurrentLocationWeather(response) {
 
 //6.A function to update the forecast (city)
 function getRemoteForecasteWeather (response){
-//console.log(response);
 tempDayOne = Math.round(response.data.list[6].main.temp_max);
 tempDayTwo = Math.round(response.data.list[14].main.temp_max);
 tempDayThree = Math.round(response.data.list[22].main.temp_max);
 tempDayFour = Math.round(response.data.list[30].main.temp_max);
 tempDayFive = Math.round(response.data.list[38].main.temp_max);
+document.querySelector("#precipitation").innerHTML = `${Math.round((response.data.list[0].pop)*100)}%`;
 document.querySelector("#max-temp-day-one").innerHTML = `${Math.round(response.data.list[6].main.temp_max)}ºC`;//day1
 document.querySelector("#description-day-one").innerHTML = response.data.list[6].weather[0].main;//day1
 document.querySelector("#icon-right-card-day-one").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.list[8].weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
