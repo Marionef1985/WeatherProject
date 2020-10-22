@@ -32,7 +32,7 @@ document.querySelector("#day-three").innerHTML = `${dayThree}`;
 let dayFour = days[now.getDay()+4];
 document.querySelector("#day-four").innerHTML = `${dayFour}`;
 let dayFive = days[now.getDay()+5];
-document.querySelector("#day-five").innerHTML = `${dayFive}`;
+document.querySelector("#day-five").innerHTML=`${dayFive}`;
 
 // esta formula pide que la info que pongamos en el search tenga un accion y llame a la funcion de "get city"
 
@@ -90,7 +90,7 @@ function showPosition(position) {
   axios.get(apiUrlForecast).then(getRemoteForecasteWeather); 
   //estamos llamando a axios para que nos muestre la temperatura local, pero tenemos que crear primero la function de "showTemperature"
 } //cuando usamos axios, en la function que creamos pondremos un (response) osea showTemperature(response)
-//showForecastCurrentTemperature
+//
 
 //5.A function to update the current weather
 function showCurrentLocationWeather(response) {
@@ -99,6 +99,7 @@ function showCurrentLocationWeather(response) {
   currentMinTempCelsius = Math.round(response.data.main.temp_min);
   currentMaxTempCelsius = Math.round(response.data.main.temp_max);
   currentTempFeels = Math.round(response.data.main.feels_like);
+  windSpeed = Math.round(response.data.wind.speed);
   document.querySelector("#current-temp").innerHTML =  `${Math.round(response.data.main.temp)}ºC` ;
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#temp-descrition").innerHTML = response.data.weather[0].main;
@@ -106,6 +107,7 @@ function showCurrentLocationWeather(response) {
   document.querySelector("#max-temperature").innerHTML = `${Math.round(response.data.main.temp_max)}ºC` ;
   document.querySelector("#humidity-answer").innerHTML = Math.round(response.data.main.humidity);
   document.querySelector("#feels-like-answer").innerHTML = `${Math.round(response.data.main.feels_like)}ºC`;
+  document.querySelector("#wind-speed").innerHTML = `${Math.round(windSpeed * 3.6)}km/h`;
   document.querySelector("#icon-left-card").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);//icono del clima en tarjeta izquierda
   document.querySelector("#icon-left-card").setAttribute("alt", `${response.data.weather[0].description}`);
   document.querySelector("#farenheit-btn").addEventListener("click", changeTempFarCurrent); //latitude and longitude
@@ -168,7 +170,7 @@ let tempDayTwo = null;
 let tempDayThree = null;
 let tempDayFour = null;
 let tempDayFive = null;
-
+let windSpeed = null;
 //8.A function to convert to F
 function changeTempFarCurrent(event) {
 event.preventDefault();
