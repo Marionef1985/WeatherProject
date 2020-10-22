@@ -19,21 +19,15 @@ let days = [
 let day = days[now.getDay()];
 let hours = addZero(now.getHours());
 let minutes = addZero(now.getMinutes());
-let dayTwo = days[now.getDay()+2];
+
 function runtime() {
   nowDate.innerHTML = `${day}, ${hours}:${minutes}`;
-document.querySelector("#day-two").innerHTML = `${dayTwo}`;
 }
-//let dayTwo = days[now.getDay()+2];
+
 runtime();
 
-function nextDay(tomorrow){    
-now.setDate(now.getDate() + (tomorrow+(7-now.getDay())) % 7);
-console.log(now);
-}
-
-
-
+let dayTwo = days[now.getDay()+2];
+document.querySelector("#day-two").innerHTML = `${dayTwo}`;
 let dayThree = days[now.getDay() + (4+(7-now.getDay()))];
 document.querySelector("#day-three").innerHTML = `${dayThree}`;
 let dayFour = days[now.getDay() + (5+(7-now.getDay()) % 7)];
