@@ -179,5 +179,3 @@ document.querySelector("#max-temp-day-three").innerHTML = `${Math.round(((tempDa
 document.querySelector("#max-temp-day-four").innerHTML = `${Math.round(((tempDayFour * 9) / 5) + 32)}ºF`;
 document.querySelector("#max-temp-day-five").innerHTML = `${Math.round(((tempDayFive * 9) / 5) + 32)}ºF`;
 }
-//
-
