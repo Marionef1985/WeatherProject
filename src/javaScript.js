@@ -26,6 +26,7 @@ function runtime() {
 
 runtime();
 
+
 let dayTwo = days[(now.getDay()+2)-7];
 document.querySelector("#day-two").innerHTML = `${dayTwo}`;
 let dayThree = days[(now.getDay() +3)-7];
@@ -34,15 +35,6 @@ let dayFour = days[(now.getDay() + 4)-7];
 document.querySelector("#day-four").innerHTML = `${dayFour}`;
 let dayFive = days[(now.getDay() + 5)-7];
 document.querySelector("#day-five").innerHTML=`${dayFive}`;
-
-
-// esta formula pide que la info que pongamos en el search tenga un accion y llame a la funcion de "get city"
-
-
-
-
-//toda la informacion que sale en el card de la izquierda (todays temp)
-
 
 //1.A function to submit the form
 function getCity(event) {
@@ -77,9 +69,7 @@ axios.get(apiUrlRemoteForecaste).then(getRemoteForecasteWeather);
 
 search("New York");
 
-function getPrecipitation(response) {
-  console.log(response);
-}
+
 
 //4.A function to request the current location (axios)
 function showPosition(position) {
@@ -89,8 +79,8 @@ function showPosition(position) {
   let apiKey = "4618b7617a5cf5299e42edf3e250ff0a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
-  console.log(apiUrlForecast);
+  //console.log(apiUrl);
+  //console.log(apiUrlForecast);
   axios.get(apiUrl).then(showCurrentLocationWeather); 
   axios.get(apiUrlForecast).then(getRemoteForecasteWeather); 
   //estamos llamando a axios para que nos muestre la temperatura local, pero tenemos que crear primero la function de "showTemperature"
