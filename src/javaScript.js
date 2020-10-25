@@ -26,45 +26,51 @@ function runtime() {
 
 runtime();
 
+
 function getDayTwo(dayTwo) {
-  if (dayTwo < 0) {
-    dayTwo = `${dayTwo}` + 7;
+  dayTwo = days[(now.getDay()+2)];
+document.querySelector("#day-two").innerHTML = `${dayTwo}`;
+  if (dayTwo > 6) {
+    dayTwo = days[(now.getDay()+2)-7];
   }
   return dayTwo;
 }
 getDayTwo();
 
 function getDayThree(dayThree) {
-  if (dayThree < 0) {
-    dayThree = `${dayThree}` + 7;
+ dayThree = days[(now.getDay() +3)];
+document.querySelector("#day-three").innerHTML = `${dayThree}`;
+  if (dayThree > 6) {
+    dayThree = days[(now.getDay()+3)-7];
   }
   return dayThree;
+  
 }
 getDayThree();
 
 function getDayFour(dayFour) {
-  if (dayFour < 0) {
-    dayFour = `${dayFour}` + 7;
+  dayFour = days[(now.getDay()+4)];
+document.querySelector("#day-four").innerHTML = `${dayFour}`;
+  if (dayFour > 6) {
+    dayFour = days[(now.getDay()+4)-7];
   }
   return dayFour;
 }
 getDayFour();
 
 function getDayFive(dayFive) {
+  dayFive = days[(now.getDay()+5)];
+document.querySelector("#day-five").innerHTML=`${dayFive}`;
   if (dayFive < 0) {
-    dayFive = `${dayFive}` + 7;
+    dayFive = days[(now.getDay()+5)-7];
   }
   return dayFive;
 }
 getDayFive();
-let dayTwo = days[(now.getDay()+2)-7];
-document.querySelector("#day-two").innerHTML = `${dayTwo}`;
-let dayThree = days[(now.getDay() +3)-7];
-document.querySelector("#day-three").innerHTML = `${dayThree}`;
-let dayFour = days[(now.getDay() + 4)-7];
-document.querySelector("#day-four").innerHTML = `${dayFour}`;
-let dayFive = days[(now.getDay() + 5)-7];
-document.querySelector("#day-five").innerHTML=`${dayFive}`;
+
+
+
+
 
 //1.A function to submit the form
 function getCity(event) {
