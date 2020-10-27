@@ -64,7 +64,7 @@ document.querySelector("#day-five").innerHTML=`${dayFive}`;
   if (dayFive > 6) {
     dayFive = days[(now.getDay()+5-7)];
     }
-  return dayFive;
+ return dayFive;
 }
 getDayFive();
 
