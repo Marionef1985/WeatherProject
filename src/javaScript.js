@@ -27,47 +27,42 @@ function runtime() {
 runtime();
 
 
-function getDayTwo(dayTwo) {
-  dayTwo = days[(now.getDay()+2)];
-document.querySelector("#day-two").innerHTML = `${dayTwo}`;
-  if (dayTwo > 6) {
-    dayTwo = days[(now.getDay()+2)-7];
+function getDayTwo(dayTwoAn) {
+  dayTwoNum = (now.getDay()+2);
+  if (dayTwoNum > 6) {
+    dayTwoNum = (now.getDay()+2)-7;
   }
-  return dayTwo;
+  return dayTwoAn;
 }
 getDayTwo();
-
-function getDayThree(dayThree) {
- dayThree = days[(now.getDay() +3)];
-document.querySelector("#day-three").innerHTML = `${dayThree}`;
-  if (dayThree > 6) {
-    dayThree = days[(now.getDay()+3)-7];
+document.querySelector("#day-two").innerHTML = `${days[dayTwoNum]}`;
+function getDayThree(dayThreeAn) {
+ dayThreeNum = (now.getDay()+3);
+  if (dayThreeNum > 6) {
+    dayThreeNum = (now.getDay()+3)-7;
   }
-  return dayThree;
-  
+  return dayThreeAn;
 }
 getDayThree();
-
-function getDayFour(dayFour) {
-  dayFour = days[(now.getDay()+4)];
-document.querySelector("#day-four").innerHTML = `${dayFour}`;
-  if (dayFour > 6) {
-    dayFour = days[(now.getDay()+4)-7];
+document.querySelector("#day-three").innerHTML = `${days[dayThreeNum]}`;
+function getDayFour(dayFourAn) {
+  dayFourNum = (now.getDay()+4);
+  if (dayFourNum > 6) {
+    dayFourNum = (now.getDay()+4)-7;
   }
-  return dayFour;
+  return dayFourAn;
 }
-getDayFour(); 
-
-function getDayFive(dayFive) {
-  dayFive = days[now.getDay()+5];
-document.querySelector("#day-five").innerHTML=`${dayFive}`;
-  if (dayFive > 6) {
-    dayFive = days[(now.getDay()+5-7)];
+getDayFour();
+ document.querySelector("#day-four").innerHTML = `${days[dayFourNum]}`;
+function getDayFive(dayFiveAn) {
+  dayFiveNum = (now.getDay()+5);
+  if (dayFiveNum > 6) {
+    dayFiveNum = (now.getDay()+5)-7;
     }
- return dayFive;
+ return dayFiveAn;
 }
 getDayFive();
-
+document.querySelector("#day-five").innerHTML=`${days[dayFiveNum]}`;
 
 //1.A function to submit the form
 function getCity(event) {
