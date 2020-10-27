@@ -56,20 +56,17 @@ document.querySelector("#day-four").innerHTML = `${dayFour}`;
   }
   return dayFour;
 }
-getDayFour();
+getDayFour(); 
 
 function getDayFive(dayFive) {
-  dayFive = days[(now.getDay()+5)];
+  dayFive = days[now.getDay()+5];
 document.querySelector("#day-five").innerHTML=`${dayFive}`;
-  if (dayFive < 0) {
-    dayFive = days[(now.getDay()+5)-7];
-  }
+  if (dayFive > 6) {
+    dayFive = days[(now.getDay()+5-7)];
+    }
   return dayFive;
 }
 getDayFive();
-
-
-
 
 
 //1.A function to submit the form
